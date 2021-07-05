@@ -7,25 +7,28 @@ console.log('Ciao Peppe')
 Per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
 Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz. */
 
-var multiple3;
-var multiple5;
-var doublemultiple;
+var result = document.getElementById('result');
+
 
 for(var i = 1; i < 101; i++){
     if(i % 3 === 0 && i % 5 === 0){
-        doublemultiple = 'FizzBuzz';
-        console.log(doublemultiple);
+        console.log('FizzBuzz');
+        result.innerHTML += '<li> FizzBuzz </li>';
     }else if(i % 3 === 0){
-        multiple3 = 'Fizz';
-        console.log(multiple3);
+        console.log('Fizz');
+        result.innerHTML += '<li> Fizz </li>';
     }else if(i % 5 === 0){
-        multiple5 = 'Buzz';
-        console.log(multiple5);
+        console.log('Buzz');
+        result.innerHTML += '<li> Buzz </li>';
     }
     else{
         console.log(i);
+        result.innerHTML += `<li> ${i} </li>`;
     }
 }
+
+
+
 
 
 
